@@ -6,7 +6,7 @@ var ForagerBee = function() {
   // job property = find pollen
   this.job = 'find pollen';
   // canFly property set to true
-  this.canFly = 'true';
+  this.canFly = true;
   // treasureChest property = []
   this.treasureChest = [];
 
@@ -19,6 +19,6 @@ ForagerBee.prototype = Object.create(Bee.prototype)
 // set the constructor
 ForagerBee.prototype.constructor = ForagerBee;
 // forage method allows bee to add a treasure to the treasureChest
-HoneyMakerBee.prototype.forage = function () {
-  this.treasureChest += 'treasure';
+ForagerBee.prototype.forage = function (treasure) {
+  this.treasureChest.push(treasure);
 };
